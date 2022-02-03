@@ -1,14 +1,14 @@
 from matplotlib import pyplot as plt
-import threedsix
+import methods
 
 print('hey, lets plot some stats!')
 
-def doGraph(generateAverages):
+def doGraph(method):
     plt.xlabel('score')
     plt.ylabel('probability')
-    averages = generateAverages()
+    averages = methods.average(method)
     plt.plot(averages)
     plt.show()
 
 
-doGraph(threedsix.average)
+doGraph(methods.roll4d6droplowest)
